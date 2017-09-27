@@ -16,4 +16,4 @@ WORKDIR /home/jupyter
 ENTRYPOINT ["/bin/smell-baron"]
 
 # launch command
-CMD ["/bin/bash", "-c", "VIRTUAL_ENV_DISABLE_PROMPT=true && source /opt/jupyter/bin/activate && exec jupyter notebook --no-browser --ip=0.0.0.0 --port=8080"]
+CMD ["/scripts/wrapper/launch.sh"]
