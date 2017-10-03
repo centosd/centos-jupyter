@@ -2,8 +2,8 @@
 yum install -y epel-release
 yum install -y python34 python34-pip
 
-#yum groupinstall -y 'Development Tools'
-#yum install -y python34-devel
+yum groupinstall -y 'Development Tools'
+yum install -y python34-devel
 
 pip3 install --no-cache-dir --upgrade pip
 pip3 install --no-cache-dir virtualenv
@@ -13,6 +13,8 @@ virtualenv /opt/jupyter
 
 adduser jupyter
 chown -R jupyter.jupyter /opt/jupyter
+
+chown -R jupyter.jupyter /usr/local
 
 ### install jupyter
 
