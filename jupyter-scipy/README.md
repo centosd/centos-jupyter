@@ -27,7 +27,7 @@ From [centosd/jupyter-scipy](https://hub.docker.com/r/centosd/jupyter-scipy/)
 
 * `pandas` `matplotlib`
 * `numpy` `scipy` `scikit-learn`
-* `tensorflow` `tflearn` `keras`
+* `tensorflow` `jupyter-tensorboard` `tflearn` `keras`
 * and their dependencies...
 
 #### Usage
