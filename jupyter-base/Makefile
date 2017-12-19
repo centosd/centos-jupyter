@@ -8,4 +8,4 @@ build:
 	docker build --no-cache -t $(HUB_USER)/$(IMAGE_NAME) .
 
 clean:
-	docker image prune -f
+	docker images | grep "<none>" | awk "{print \$$3}" | xargs -r docker rmi -f
