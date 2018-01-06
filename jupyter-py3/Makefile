@@ -17,5 +17,8 @@ run2: kill
 kill:
 	docker rm -fv my-$(IMAGE_NAME) || /bin/true
 
+debug:
+	docker run --rm -it $(HUB_USER)/$(IMAGE_NAME) bash
+
 clean:
 	docker images | grep "<none>" | awk "{print \$$3}" | xargs -r docker rmi -f

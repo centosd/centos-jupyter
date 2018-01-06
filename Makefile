@@ -15,4 +15,4 @@ clean:
 	docker rmi $(HUB_USER)/jupyter-scipy || /bin/true
 	docker rmi $(HUB_USER)/jupyter-py3 || /bin/true
 	docker rmi $(HUB_USER)/jupyter-base || /bin/true
-	docker image prune -f
+	docker images | grep "<none>" | awk "{print \$$3}" | xargs -r docker rmi -f

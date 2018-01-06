@@ -9,3 +9,6 @@ build:
 
 clean:
 	docker images | grep "<none>" | awk "{print \$$3}" | xargs -r docker rmi -f
+
+debug:
+	docker run --rm -it $(HUB_USER)/$(IMAGE_NAME) bash

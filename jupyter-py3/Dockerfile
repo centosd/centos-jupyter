@@ -4,13 +4,13 @@ FROM centosd/jupyter-base
 EXPOSE 8080
 
 # volumes
-VOLUME ["/home/jupyter"]
+VOLUME ["/home/jupyter/work"]
 
 # daemon owner
 USER jupyter
 
 # daemon workdir
-WORKDIR /home/jupyter
+WORKDIR /home/jupyter/work
 
 # init - zombie reaping
 ENTRYPOINT ["/bin/smell-baron"]
