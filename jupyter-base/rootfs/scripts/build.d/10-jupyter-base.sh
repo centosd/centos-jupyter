@@ -3,12 +3,13 @@ yum install -y epel-release
 yum install -y https://centos7.iuscommunity.org/ius-release.rpm
 
 yum groupinstall -y 'Development Tools'
-yum install -y python36u python-devel python36u-devel python2-pip python36u-pip
+yum install -y cmake python36u python-devel python36u-devel python2-pip python36u-pip
 
-ln /usr/bin/pip3.6 /usr/bin/pip3
+python2.7 -m pip install --no-cache-dir --upgrade pip
+python3.6 -m pip install --no-cache-dir --upgrade pip
 
-pip2 install --no-cache-dir --upgrade pip
-pip3 install --no-cache-dir --upgrade pip
+#ln -s /usr/bin/pip2.7 /usr/bin/pip2
+#ln -s /usr/bin/pip3.6 /usr/bin/pip3
 
 adduser jupyter
 chown -R jupyter.jupyter /usr/local
